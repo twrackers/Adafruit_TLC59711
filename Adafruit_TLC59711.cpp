@@ -117,7 +117,7 @@ void Adafruit_TLC59711::write() {
  *          pwm value
  */
 void Adafruit_TLC59711::setPWM(uint16_t chan, uint16_t pwm) {
-  if (chan > 12 * numdrivers)
+  if (chan >= 12 * numdrivers)
     return;
   pwmbuffer[chan] = pwm;
 }
